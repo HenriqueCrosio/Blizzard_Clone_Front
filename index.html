@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blizzard Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-left">
+                <a href="#" class="logo">
+                    <img src="images/blizzard_logo.png" alt="Logo Blizzard">
+                </a>
+                <ul class="game-list">
+                    <li><a href="#">Warcraft</a></li>
+                    <li><a href="#">Diablo</a></li>
+                    <li><a href="#">Overwatch</a></li>
+                    <li><a href="#">Starcraft</a></li>
+                    <li><a href="#" class="more-games">...</a></li>
+                </ul>
+            </div>
+            <div class="navbar-right">
+                <ul class="nav-links">
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#">Loja</a></li>
+                    <li><a href="#">Conta</a></li>
+                    <li>
+                        <a href="#" class="account-icon">
+                            <i class="fas fa-user"></i>
+                        </a>
+                    </li>
+                </ul>
+                <a href="#" class="download-button">Baixe o Battle.net</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-carousel">
+            <div class="carousel-container">
+                <div class="carousel-slide">
+                    <img src="images/hero_3.png" alt="BlizzCon" class="hero-image">
+                    <div class="hero-content">
+                        <img src="images/hero_3_logo.png" alt="BlizzCon Logo" class="hero-logo">
+                        <h2 class="hero-title">Aguardando a próxima BlizzCon</h2>
+                        <button class="hero-button">Saiba Mais</button>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/hero_1.png" alt="WoW 20th Anniversary" class="hero-image">
+                    <div class="hero-content">
+                        <img src="images/hero_1_logo.png" alt="WoW Logo" class="hero-logo">
+                        <h2 class="hero-title">Não perca o 20th aniversário do WoW</h2>
+                        <button class="hero-button">Saiba Mais</button>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/hero_2.png" alt="New Release" class="hero-image">
+                    <div class="hero-content">
+                        <img src="images/hero_2_logo.png" alt="Game Logo" class="hero-logo">
+                        <h2 class="hero-title">Já Disponível!</h2>
+                        <button class="hero-button">Saiba Mais</button>
+                    </div>
+                </div>
+            </div>
+
+            <button class="carousel-arrow prev">&lt;</button>
+            <button class="carousel-arrow next">&gt;</button>
+
+            <div class="carousel-nav">
+                <div class="carousel-indicators">
+                    <span class="indicator active"></span>
+                    <span class="indicator"></span>
+                    <span class="indicator"></span>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-games">
+            <div class="section-header">
+                <h2>Jogos em Destaque</h2>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">Todos</button>
+                    <button class="filter-btn" data-filter="pc">PC</button>
+                    <button class="filter-btn" data-filter="console">Console</button>
+                    <button class="filter-btn" data-filter="mobile">Dispositivos Móveis</button>
+                </div>
+            </div>
+            <div class="game-cards">
+                <div class="game-card" data-categories="pc console">
+                    <div class="card-media">
+                        <img src="images/card_1.png" alt="Diablo IV">
+                        <video src="videos/card_1.mp4" loop muted preload="auto"></video>
+                    </div>
+                    <h3>Diablo IV</h3>
+                    <p>RPG de Ação</p>
+                    <div class="game-platforms">
+                        <img src="images/battlenet.png" alt="Battle.net">
+                        <img src="images/xbox.png" alt="Xbox">
+                        <img src="images/playstation.png" alt="PlayStation">
+                        <img src="images/steam.png" alt="Steam">
+                    </div>
+                </div>
+                <div class="game-card" data-categories="pc">
+                    <div class="card-media">
+                        <img src="images/card_2.png" alt="World of Warcraft: The War Within">
+                        <video src="videos/card_2.mp4" loop muted preload="auto"></video>
+                    </div>
+                    <h3>World of Warcraft: The War Within</h3>
+                    <p>MMORPG</p>
+                    <div class="game-platforms">
+                        <img src="images/battlenet.png" alt="Battle.net">
+                    </div>
+                </div>
+                <div class="game-card" data-categories="pc">
+                    <div class="card-media">
+                        <img src="images/card_3.png" alt="World of Warcraft: Cataclysm Classic">
+                        <video src="videos/card_3.mp4" loop muted preload="auto"></video>
+                    </div>
+                    <h3>World of Warcraft: Cataclysm Classic</h3>
+                    <p>MMORPG</p>
+                    <div class="game-platforms">
+                        <img src="images/battlenet.png" alt="Battle.net">
+                    </div>
+                </div>
+                <div class="game-card" data-categories="mobile">
+                    <div class="card-media">
+                        <img src="images/card_4.png" alt="Warcraft Rumble">
+                        <video src="videos/card_4.mp4" loop muted preload="auto"></video>
+                    </div>
+                    <h3>Warcraft Rumble</h3>
+                    <p>Ação e Estratégia para dispositivos móveis</p>
+                    <div class="game-platforms">
+                        <img src="images/apple.png" alt="Apple">
+                        <img src="images/android.png" alt="Android">
+                    </div>
+                </div>
+                <div class="game-card" data-categories="pc console">
+                    <div class="card-media">
+                        <img src="images/card_5.png" alt="Overwatch 2">
+                        <video src="videos/card_5.mp4" loop muted preload="auto"></video>
+                    </div>
+                    <h3>Overwatch 2</h3>
+                    <p>Ação em Equipe</p>
+                    <div class="game-platforms">
+                        <img src="images/battlenet.png" alt="Battle.net">
+                        <img src="images/xbox.png" alt="Xbox">
+                        <img src="images/playstation.png" alt="PlayStation">
+                        <img src="images/steam.png" alt="Steam">
+                        <img src="images/switch.png" alt="Nintendo Switch">
+                    </div>
+                </div>
+                <div class="game-card" data-categories="pc mobile">
+                    <div class="card-media">
+                        <img src="images/card_6.png" alt="Hearthstone">
+                        <video src="videos/card_6.mp4" loop muted preload="auto"></video>
+                    </div>
+                    <h3>Hearthstone</h3>
+                    <p>Jogo de Cards Estratégico</p>
+                    <div class="game-platforms">
+                        <img src="images/apple.png" alt="Apple">
+                        <img src="images/android.png" alt="Android">
+                        <img src="images/battlenet.png" alt="Battle.net">
+                    </div>
+                </div>
+                <div class="game-card" data-categories="pc">
+                    <div class="card-media">
+                        <img src="images/card_7.png" alt="Warcraft III: Reforged">
+                        <video src="videos/card_7.mp4" loop muted preload="auto"></video>
+                    </div>
+                    <h3>Warcraft III: Reforged</h3>
+                    <p>Estratégia em Tempo Real</p>
+                    <div class="game-platforms">
+                        <img src="images/battlenet.png" alt="Battle.net">
+                    </div>
+                </div>
+                <div class="game-card" data-categories="pc">
+                    <div class="card-media">
+                        <img src="images/card_8.png" alt="Heroes of the Storm">
+                        <video src="videos/card_8.mp4" loop muted preload="auto"></video>
+                    </div>
+                    <h3>Heroes of the Storm</h3>
+                    <p>MOBA</p>
+                    <div class="game-platforms">
+                        <img src="images/battlenet.png" alt="Battle.net">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="download-battlenet">
+            <div class="download-card">
+                <img src="images/dw_battlenet.png" alt="Download Battle.net" class="download-image">
+                <div class="download-buttons">
+                    <button class="download-btn">Download</button>
+                    <button class="learn-more-btn">Saiba Mais</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-nav">
+            <a href="#">Carreiras</a>
+            <a href="#">Sobre</a>
+            <a href="#">Suporte</a>
+            <a href="#">Contato</a>
+            <a href="#">Imprensa</a>
+            <a href="#">API</a>
+            <a href="#">Mapa do Site</a>
+        </div>
+        <hr class="footer-divider">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="images/blizzard_ent.png" alt="Blizzard Entertainment">
+            </div>
+            <div class="footer-rights">
+                <br>
+                  <br>
+                    <br>
+                      <br>
+                © 2024 Blizzard Entertainment, Inc. Todos os direitos reservados. Este é um projeto educacional não comercial. 
+                Todos os recursos, incluindo imagens e vídeos, foram retirados do site oficial da Blizzard Entertainment para fins de estudo e demonstração. 
+                Não há intenção de infringir direitos autorais ou obter ganhos comerciais. Todos os direitos sobre o conteúdo pertencem à Blizzard Entertainment, Inc.
+            </div>
+            <div class="footer-social">
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-reddit-alien"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="carousel.js"></script>
+</body>
+</html>
