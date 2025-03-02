@@ -1,8 +1,8 @@
 ## 🎮 Clone do Site da Blizzard 🎮
 
-📚 Sobre o Projeto
+## 📚 Sobre o Projeto
 
-## Este projeto é um clone do site oficial da Blizzard, desenvolvido com HTML5, CSS3 e JavaScript puro. O objetivo principal é aprimorar habilidades de desenvolvimento front-end e demonstrar capacidades técnicas.
+Este projeto é um clone do site oficial da Blizzard, desenvolvido com HTML5, CSS3 e JavaScript puro. O objetivo principal é aprimorar habilidades de desenvolvimento front-end e demonstrar capacidades técnicas.
 
 🛠 Tecnologias Utilizadas
 
@@ -32,17 +32,17 @@ Vanilla JavaScript 🧮
 
 ## 📝 Legal Disclaimer
 
-## This is a non-commercial educational project. All resources, including images and videos, were taken from the official Blizzard Entertainment website for study and demonstration purposes. There is no intention to infringe copyrights or obtain commercial gains. All rights to the content belong to Blizzard Entertainment, Inc.
+This is a non-commercial educational project. All resources, including images and videos, were taken from the official Blizzard Entertainment website for study and demonstration purposes. There is no intention to infringe copyrights or obtain commercial gains. All rights to the content belong to Blizzard Entertainment, Inc.
 
-## 📚 Copyright Notice
+📚 Copyright Notice
 
 ## 📝 Português:
 
-## © 2024 Blizzard Entertainment, Inc. Todos os direitos reservados. Este é um projeto educacional não comercial.
+© 2024 Blizzard Entertainment, Inc. Todos os direitos reservados. Este é um projeto educacional não comercial.
 
 ## 📝 Inglês:
 
-## © 2024 Blizzard Entertainment, Inc. All rights reserved. This is a non-commercial educational project.
+© 2024 Blizzard Entertainment, Inc. All rights reserved. This is a non-commercial educational project.
 
 ## 🌐 Visualize o Projeto
 

@@ -674,4 +674,91 @@ h1, h2, h3 {
     .footer-social {
         margin-left: 0;
     }
+
+    /* Estilos para telas menores (tablets e celulares) */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        width: 90%;
+        position: static;
+        transform: none;
+        margin-top: 10px;
+    }
+
+    .navbar-left, .navbar-right {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .game-list, .nav-links {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .game-list li, .nav-links li {
+        margin: 5px 0;
+    }
+
+    .account-icon {
+        margin-left: 0;
+        margin-top: 5px;
+    }
+
+    .download-button {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .hero-carousel {
+        height: auto;
+        padding-bottom: 20px;
+    }
+
+    .carousel-slide {
+        flex: 0 0 100%;
+        margin: 0;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .hero-content {
+        position: relative;
+        left: 0;
+        top: 0;
+        max-width: 100%;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .hero-logo {
+        max-width: 250px;
+    }
+
+    .hero-title {
+        font-size: 2em;
+    }
+
+    .carousel-arrow {
+        display: none; /* Esconde as setas em telas menores */
+    }
+
+    .game-cards {
+        grid-template-columns: 1fr; /* Uma coluna em telas menores */
+    }
+}
+
+/* Estilos para telas menores ainda (celulares) */
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 1.5em;
+    }
+
+    .hero-button {
+        padding: 12px 24px;
+        font-size: 1em;
+    }
+}
+
 }
