@@ -1,4 +1,17 @@
-/* Variáveis (opcional) */
+/* Reset básico e box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Impedir overflow horizontal */
+  html, body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+  
+
 :root {
     --primary-color: #00aeff;
     --secondary-color: #0088cc;
@@ -484,10 +497,10 @@
     margin-left: auto;
   }
   
-  /* ========================
-     RESPONSIVIDADE - MOBILE FIRST
-     ======================== */
-  
+/* ========================
+   RESPONSIVIDADE - MOBILE FIRST
+   ======================== */
+
 /* Até 768px (smartphones) */
 @media (max-width: 768px) {
     /* Navbar */
@@ -496,27 +509,30 @@
       top: 0;
       left: 0;
       transform: none;
-      width: 100%;
+      width: 100% !important; /* Força 100% de largura no mobile */
       border-radius: 0;
       justify-content: space-between;
     }
   
-    /* Esconde a lista de jogos para evitar overflow */
-    .game-list {
-      display: none;
-    }
-    
-    .menu-icon {
-      display: block; /* Mostra o ícone no mobile */
-    }
-    
-    .navbar-left {
-      margin: 10px 0;
-    }
-    
-    /* Esconde a lista de links da direita no mobile, exibindo somente quando tiver a classe "show" */
+    /* Esconde a lista de jogos e os links por padrão para não ultrapassar a tela */
+    .game-list,
     .nav-links {
-      display: none;
+      display: none !important;
+    }
+  
+    /* Ícone do menu hamburguer aparece e vai para a extrema direita */
+    .menu-icon {
+      display: block;
+      cursor: pointer;
+      font-size: 24px;
+      color: #fff;
+      margin-left: auto;    /* Joga para a direita */
+      margin-right: 20px;   /* Espaço entre o ícone e a borda direita */
+    }
+  
+    /* Exibe os links quando a classe "show" é adicionada via JS */
+    .nav-links.show {
+      display: flex !important;
       flex-direction: column;
       width: 100%;
       background: var(--navbar-bg);
@@ -524,28 +540,25 @@
       border-radius: 0 0 4px 4px;
       position: relative;
     }
-    
-    .nav-links.show {
-      display: flex;
-    }
-    
+  
     .nav-links li {
       margin: 10px 0;
+      text-align: center;
     }
-    
-    /* Ajuste do botão de download */
+  
+    /* Oculta o botão "Baixe o Battle.net" no mobile */
     .download-button {
-      margin: 10px 0;
+      display: none !important;
     }
-    
-    /* Carrossel */
+  
+    /* Hero Carousel */
     .hero-carousel {
-      margin-top: 60px;
+      margin-top: 60px; /* Evitar sobreposição com navbar fixa */
       height: auto;
     }
     .carousel-slide {
       flex: 0 0 100%;
-      margin: 0;
+      margin: 0 !important; /* Remove margens que possam causar overflow */
       border-radius: 0;
     }
     .hero-content {
@@ -571,56 +584,76 @@
     .carousel-arrow {
       display: none;
     }
-    
+  
     /* Cards */
+    .featured-games {
+      padding: 20px !important; /* Reduz o padding para não somar com larguras */
+    }
     .game-cards {
+      /* Exibir em 1 coluna no mobile, evitando perda de formatação */
       grid-template-columns: 1fr;
       padding: 15px;
     }
-    
-    /* Download */
+  
+    /* >>> OCULTA OS BOTÕES DE FILTRO NO MOBILE <<< */
+    .filter-buttons {
+      display: none !important;
+    }
+  
+    /* Download Battle.net */
     .download-card {
+      position: relative;
+      max-width: 1000px;
       margin: 20px auto;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+      background: #1e1e1e; /* Fundo escuro para os botões */
+      text-align: center;
+      padding: 40px 20px;
+    }
+    .download-image-wrapper {
+      margin-bottom: 20px;
+    }
+    .download-image {
+      width: 100%;
+      height: auto;
+      display: block;
     }
     .download-buttons {
-      left: 20px;
-      bottom: 20px;
-      flex-direction: column;
+      display: flex;
+      flex-direction: column; /* Empilha os botões no mobile */
+      gap: 10px;
+      align-items: center;
+      justify-content: center;
     }
-    .download-btn, .learn-more-btn {
-      margin-bottom: 10px;
-    }
-    
+  
     /* Rodapé */
-    .footer-logo img {
-      max-width: 150px;
-    }
-    
-    /* Ajustes do Footer */
     .footer-content {
       flex-direction: column;
       align-items: center;
       text-align: center;
     }
-    
     .footer-logo {
       margin-right: 0;
       margin-bottom: 20px;
     }
-    
     .footer-rights {
       max-width: 90%;
       margin-bottom: 20px;
     }
-    
     .footer-social {
       margin-left: 0;
       margin-bottom: 20px;
     }
   }
   
-  /* Entre 769px e 1024px (tablets) */
-  @media (min-width: 769px) and (max-width: 1024px) {
+  /* Entre 769px e 1200px (tablets e telas médias) */
+  @media (min-width: 769px) and (max-width: 1200px) {
+    /* Em telas intermediárias, exibir 3 colunas */
+    .game-cards {
+      grid-template-columns: repeat(3, 1fr);
+    }
     .carousel-slide {
       flex: 0 0 96%;
       margin: 0 2%;
@@ -630,40 +663,31 @@
     }
   }
   
-  /* Acima de 1025px (desktops) */
-  @media (min-width: 1025px) {
-    .carousel-slide {
-      flex: 0 0 90%;
-      margin: 0 5%;
-    }
-    .hero-title {
-      font-size: 3em;
-    }
+  /* Entre 1201px e 1600px */
+  @media (min-width: 1201px) and (max-width: 1600px) {
+    /* Em telas maiores, mas ainda não gigantes, exibir 4 colunas */
     .game-cards {
       grid-template-columns: repeat(4, 1fr);
     }
   }
   
-  /* Ajustes intermediários */
-  @media (max-width: 1200px) {
+  /* Acima de 1601px (desktops muito grandes) */
+  @media (min-width: 1601px) {
     .game-cards {
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
     }
   }
   
+  /* Ajuste adicional para telas menores que 900px (opcional):
+     Se quiser 2 colunas abaixo de 900px, retire o comentário.
+     Se preferir manter 1 coluna no mobile, deixe comentado. */
+  /*
   @media (max-width: 900px) {
     .game-cards {
       grid-template-columns: repeat(2, 1fr);
     }
   }
-  
-  @media (max-width: 600px) {
-    .game-cards {
-      grid-template-columns: 1fr;
-    }
-  }
+  */
   
   
   
-
-

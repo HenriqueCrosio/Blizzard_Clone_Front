@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Mantendo fontes e meta tags originais -->
     <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blizzard Page</title>
+    <!-- Mantendo referência ao seu CSS externo -->
     <link rel="stylesheet" href="style.css">
+    <!-- Ícones do Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -204,8 +207,12 @@
         <!-- DOWNLOAD BATTLE.NET -->
         <section class="download-battlenet">
             <div class="download-card">
-                <img src="images/dw_battlenet.png" alt="Download Battle.net" class="download-image">
-                <div class="download-buttons">
+                <!-- Envolvemos a imagem em uma div para separar do bloco escuro dos botões -->
+                <div class="download-image-wrapper">
+                    <img src="images/dw_battlenet.png" alt="Download Battle.net" class="download-image">
+                </div>
+                <!-- Fundo escuro para destacar os botões e evitar sobreposição na imagem -->
+                <div class="download-content">
                     <button class="download-btn">Download</button>
                     <button class="learn-more-btn">Saiba Mais</button>
                 </div>
@@ -213,6 +220,7 @@
         </section>
     </main>
 
+    <!-- FOOTER -->
     <footer class="site-footer">
         <div class="footer-nav">
             <a href="#">Carreiras</a>
@@ -243,6 +251,8 @@
         </div>
     </footer>
 
+    <!-- Script do carrossel + toggle do menu hamburguer -->
     <script src="carousel.js"></script>
 </body>
 </html>
+
