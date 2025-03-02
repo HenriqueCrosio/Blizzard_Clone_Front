@@ -1,5 +1,17 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Carrossel
+    // --------------------------------
+    // 1) MENU RESPONSIVO
+    // --------------------------------
+    const menuIcon = document.querySelector('.menu-icon');
+    const navLinks = document.querySelector('.nav-links');
+
+    menuIcon.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+
+    // --------------------------------
+    // 2) CARROSSEL
+    // --------------------------------
     const container = document.querySelector('.carousel-container');
     const slides = document.querySelectorAll('.carousel-slide');
     const indicators = document.querySelectorAll('.indicator');
@@ -17,10 +29,10 @@ document.addEventListener('DOMContentLoaded', function() {
         const slideWidth = slides[0].offsetWidth;
         const slideMargin = parseFloat(getComputedStyle(slides[0]).marginRight);
         const offset = -(currentSlide + 1) * (slideWidth + slideMargin * 2);
-        
+
         container.style.transition = transition ? 'transform 0.5s ease' : 'none';
         container.style.transform = `translateX(${offset}px)`;
-        
+
         indicators.forEach((indicator, index) => {
             indicator.classList.toggle('active', index === currentSlide);
         });
@@ -64,20 +76,19 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Ajusta o carrossel quando a janela é redimensionada
     window.addEventListener('resize', () => updateCarousel(false));
-
-    // Inicializar o carrossel
     updateCarousel(false);
 
-    // Funcionalidade para os cards de jogos
+    // --------------------------------
+    // 3) FILTRO DOS CARDS DE JOGOS
+    // --------------------------------
     const gameCards = document.querySelectorAll('.game-card');
     const filterButtons = document.querySelectorAll('.filter-btn');
 
     filterButtons.forEach(button => {
         button.addEventListener('click', () => {
             const filter = button.getAttribute('data-filter');
-            
+
             filterButtons.forEach(btn => btn.classList.remove('active'));
             button.classList.add('active');
 
@@ -92,6 +103,9 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // --------------------------------
+    // 4) VÍDEOS NOS CARDS
+    // --------------------------------
     gameCards.forEach(card => {
         const video = card.querySelector('video');
         if (video) {
@@ -107,7 +121,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 video.style.opacity = '1';
                 video.play().catch(error => {
                     console.log("Autoplay foi impedido:", error);
-                    // Você pode adicionar um botão de play aqui se desejar
+                    // Botão de play (caso queira tratar manualmente)
                     const playButton = document.createElement('button');
                     playButton.textContent = 'Play';
                     playButton.style.position = 'absolute';
@@ -116,7 +130,10 @@ document.addEventListener('DOMContentLoaded', function() {
                     playButton.style.transform = 'translate(-50%, -50%)';
                     playButton.style.zIndex = '10';
                     card.querySelector('.card-media').appendChild(playButton);
-                    playButton.addEventListener('click', () => video.play());
+                    playButton.addEventListener('click', () => {
+                        video.play();
+                        playButton.remove();
+                    });
                 });
             });
 
