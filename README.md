@@ -28,7 +28,7 @@ HTML5 📄
 
 CSS3 🎨
 
-## Vanilla JavaScript 🧮
+Vanilla JavaScript 🧮
 
 ## 📝 Legal Disclaimer
 
