@@ -10,7 +10,7 @@ HTML5 📄
 
 CSS3 🎨
 
-## JavaScript Vanilla 🧮
+JavaScript Vanilla 🧮
 
 📝 Aviso Legal
 Este é um projeto educacional não comercial. Todos os recursos, incluindo imagens e vídeos, foram retirados do site oficial da Blizzard Entertainment para fins de estudo e demonstração. Não há intenção de infringir direitos autorais ou obter ganhos comerciais. Todos os direitos sobre o conteúdo pertencem à Blizzard Entertainment, Inc. 📝
