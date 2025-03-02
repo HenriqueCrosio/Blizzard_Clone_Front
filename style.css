@@ -488,8 +488,8 @@
      RESPONSIVIDADE - MOBILE FIRST
      ======================== */
   
-  /* Até 768px (smartphones) */
-  @media (max-width: 768px) {
+/* Até 768px (smartphones) */
+@media (max-width: 768px) {
     /* Navbar */
     .navbar {
       flex-wrap: wrap;
@@ -501,15 +501,20 @@
       justify-content: space-between;
     }
   
+    /* Esconde a lista de jogos para evitar overflow */
+    .game-list {
+      display: none;
+    }
+    
     .menu-icon {
       display: block; /* Mostra o ícone no mobile */
     }
-  
+    
     .navbar-left {
       margin: 10px 0;
     }
-  
-    /* Esconde a lista de links da direita no mobile, exibindo só quando tiver a classe "show" */
+    
+    /* Esconde a lista de links da direita no mobile, exibindo somente quando tiver a classe "show" */
     .nav-links {
       display: none;
       flex-direction: column;
@@ -519,20 +524,20 @@
       border-radius: 0 0 4px 4px;
       position: relative;
     }
-  
+    
     .nav-links.show {
       display: flex;
     }
-  
+    
     .nav-links li {
       margin: 10px 0;
     }
-  
+    
     /* Ajuste do botão de download */
     .download-button {
       margin: 10px 0;
     }
-  
+    
     /* Carrossel */
     .hero-carousel {
       margin-top: 60px;
@@ -566,13 +571,13 @@
     .carousel-arrow {
       display: none;
     }
-  
+    
     /* Cards */
     .game-cards {
       grid-template-columns: 1fr;
       padding: 15px;
     }
-  
+    
     /* Download */
     .download-card {
       margin: 20px auto;
@@ -585,10 +590,32 @@
     .download-btn, .learn-more-btn {
       margin-bottom: 10px;
     }
-  
+    
     /* Rodapé */
     .footer-logo img {
       max-width: 150px;
+    }
+    
+    /* Ajustes do Footer */
+    .footer-content {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    
+    .footer-logo {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+    
+    .footer-rights {
+      max-width: 90%;
+      margin-bottom: 20px;
+    }
+    
+    .footer-social {
+      margin-left: 0;
+      margin-bottom: 20px;
     }
   }
   
@@ -635,6 +662,7 @@
       grid-template-columns: 1fr;
     }
   }
+  
   
   
 
